@@ -1,31 +1,84 @@
-body {
-    font-family: Arial, sans-serif;
+/* Réinitialisation de base */
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
+
+/* Structure de base */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* En-tête */
 header {
     background: #4CAF50;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
 }
+
+/* Navigation */
 nav {
     background: #333;
     color: white;
     text-align: center;
     padding: 10px;
 }
+
 nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
 }
-main {
-    padding: 20px;
+
+nav a:hover {
+    text-decoration: underline;
 }
+
+/* Contenu principal */
+main {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    box-sizing: border-box;
+}
+
+/* Pied de page toujours en bas */
 footer {
-    text-align: center;
-    padding: 10px;
     background: #4CAF50;
     color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Assure que le footer reste en bas si le contenu est insuffisant */
+    width: 100%;
+    position: relative;
+}
+
+/* Liens dans le footer */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sections principales */
+section {
+    margin-bottom: 20px;
+}
+
+/* Liens internes */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
 }
