@@ -1,19 +1,25 @@
-/* Réinitialisation de base */
+/* ==============================
+   Réinitialisation de base
+============================== */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* Structure de base */
+/* ==============================
+   Structure principale
+============================== */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Assure une hauteur minimale égale à la hauteur de la fenêtre */
     font-family: Arial, sans-serif;
 }
 
-/* En-tête */
+/* ==============================
+   En-tête
+============================== */
 header {
     background: #4CAF50;
     color: white;
@@ -21,7 +27,19 @@ header {
     padding: 20px 0;
 }
 
-/* Navigation */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header h2 {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+/* ==============================
+   Barre de navigation
+============================== */
 nav {
     background: #333;
     color: white;
@@ -33,21 +51,46 @@ nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Contenu principal */
+/* ==============================
+   Contenu principal
+============================== */
 main {
-    flex: 1;
+    flex: 1; /* Permet au contenu principal de s'étendre pour occuper l'espace restant */
     padding: 20px;
     background: #f4f4f4;
     box-sizing: border-box;
 }
 
-/* Pied de page toujours en bas */
+main h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+main ul li {
+    margin-bottom: 5px;
+}
+
+/* ==============================
+   Pied de page
+============================== */
 footer {
     background: #4CAF50;
     color: white;
@@ -55,10 +98,9 @@ footer {
     padding: 10px 0;
     margin-top: auto; /* Assure que le footer reste en bas si le contenu est insuffisant */
     width: 100%;
-    position: relative;
+    font-size: 0.9em;
 }
 
-/* Liens dans le footer */
 footer a {
     color: white;
     text-decoration: none;
@@ -68,17 +110,43 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Sections principales */
+/* ==============================
+   Liens internes
+============================== */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   Sections principales
+============================== */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* Liens internes */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+/* ==============================
+   Responsive Design
+============================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
 
-ul li {
-    margin: 5px 0;
+    header h2 {
+        font-size: 1em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        margin: 0 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
 }
